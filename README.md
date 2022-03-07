@@ -1,14 +1,40 @@
-# Autograding Example: Java
-This example project is written in Java, and tested with Gradle/JUnit.
+# 課題 8-2: コンストラクタ
 
-### The assignment
-The tests are currently failing because of an output mismatch. Fixing the `System.out.println` in the main method will make the tests green.
+### 課題の説明
+課題 8-2で作成したHeroクラスに３つのコンストラクタを追加しなさい。
 
-### Setup command
-N/A
+| 引数リスト               | 処理内容                                           |
+|---------------------|------------------------------------------------|
+| なし                  | hpフィールドに初期値120を代入する、nameフィールドに「??」を初期値として代入する。 | 
+| String name         | hpフィールドに初期値120を代入する、引数のnameでnameフィールドを初期化する。   | 
+| String name, int hp | 引数のhpでhpフィールドを初期化する、引数のnameでnameフィールドを初期化する。   | 
 
-### Run command
-`gradle test`
+また、mainメソッドからコンストラクタを呼び出して、下記の実行例を得られることを確認しなさい。
+ただしこの課題ではProg82.javaは提出しなくてよい。
 
-### Notes
-- The JDK is installed on GitHub Actions machines, so you're also able to directly invoke `javac`, `java`, or any other CLI command included in the JDK. 
+### Prog82（提出不要）
+```java
+public class Prog82 {
+
+	public static void main(String[] args) {
+
+		Hero h = new Hero(); // コンストラクタの呼び出し方を変更して確認すること 
+
+		System.out.println("勇者" + h.name + "が誕生しました。HP:" + h.hp);
+	}
+}
+```
+
+
+### 実行例
+```java
+勇者??が誕生しました。HP:120
+```
+
+```java
+勇者ミナトが誕生しました。HP:120
+```
+
+```java
+勇者ミナトが誕生しました。HP:50
+```
