@@ -15,6 +15,7 @@
 | `String name, int hp` | 引数の`name`で`name`フィールドを初期化する。<br> 引数の`hp`で`hp`フィールドを初期化する。   | 
 
 【各クラスのコード雛形】
+
 ・Hero.java
 ```java
 public class Hero
